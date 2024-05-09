@@ -1,5 +1,6 @@
 ---
 icon: circle-info
+star: 9999
 cover: /mangaAsuka.jpg
 ---
 
