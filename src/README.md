@@ -2,47 +2,43 @@
 home: true
 layout: BlogHome
 icon: home
-title: 博客主页
+title: Mistyの小屋
 bgImage: BG-Asuka.png
 heroText: Misty的小屋
 heroFullScreen: true
-tagline: 你可以在这里放置你的口号与标语
+tagline: 似缥缈星辰，窥浩瀚寰宇
+
 projects:
   - icon: project
     name: 算法
-    desc: 项目详细描述
-    link: https://你的项目链接
+    desc: Algorithm
+    link: /algorithm/
 
   - icon: link
     name: 数据结构
-    desc: 链接详细描述
-    link: https://链接地址
+    desc: Datastructure
+    link: /datastruc/
 
   - icon: book
     name: 网络安全
-    desc: 书籍详细描述
-    link: https://你的书籍链接
+    desc: CyberSecurity
+    link: /cyber/
 
   - icon: article
     name: 日语
-    desc: 文章详细描述
-    link: https://你的文章链接
+    desc: Japanese
+    link: /Japanese/
+  
+  - icon: article
+    name: 英语
+    desc: English
+    link: /English/
 
   - icon: friend
-    name: 伙伴名称
-    desc: 伙伴详细介绍
-    link: https://你的伙伴链接
+    name: 友情链接-桜吹
+    desc: Cherryblowing
+    link: https://mdkiid.github.io/
 
-  - icon: https://theme-hope-assets.vuejs.press/logo.svg
-    name: 自定义项目
-    desc: 自定义详细介绍
-    link: https://你的自定义链接
 
 footer: MistyStar's Blog
 ---
-
-这是一个博客主页的案例。
-
-要使用此布局，你应该在页面前端设置 `layout: BlogHome` 和 `home: true`。
-
-相关配置文档请见 [博客主页](https://theme-hope.vuejs.press/zh/guide/blog/home.html)。

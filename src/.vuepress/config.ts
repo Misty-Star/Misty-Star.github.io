@@ -5,7 +5,7 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "MistyのBlog",
+  title: "MistyStar",
   //description: "vuepress-theme-hope 的博客演示",
 
   theme,

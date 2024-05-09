@@ -1,8 +1,15 @@
 ---
 icon: circle-info
-cover: /assets/images/cover3.jpg
+cover: /mangaAsuka.jpg
 ---
 
-# 介绍页
+# 个人介绍
 
-将你的个人介绍和档案放置在此处。
+Hi,there.My name is MistyStar,you can also call me Misty.
+
+XD
+
+一只苦逼大学牲
+
+喜爱二次元文化
+

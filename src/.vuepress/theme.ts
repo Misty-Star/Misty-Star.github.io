@@ -13,6 +13,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
+  favicon: "Asuka.png",
   // 头像
   logo: "Asuka.png",
 
@@ -27,7 +28,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
+  footer: "Misty's Blog",
   displayFooter: true,
 
   // 博客相关
