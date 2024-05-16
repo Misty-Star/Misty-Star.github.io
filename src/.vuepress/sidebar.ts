@@ -16,7 +16,13 @@ export default sidebar({
     {
       text: "网络安全",
       icon: "laptop-code",
-      children: "structure",
+      children: [
+        {
+          text: "计算机网络",
+          prefix: "Network/",
+          children: "structure",
+        },
+      ]
     },
   ],
   "/algorithm/": [
