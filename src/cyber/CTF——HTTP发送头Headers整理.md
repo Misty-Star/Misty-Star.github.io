@@ -1,19 +1,6 @@
- 
+# CTF——HTTP发送头Headers整理
 
-#### CTF——HTTP发送头Headers整理
-
-*   *   [http —请求header大全](#http_header_3)
-    *   [http —响应header大全](#http_header_39)
-    *   [请求方法大全](#_72)
-    *   [CTF在HTTP方面的总结](#CTFHTTP_85)
-    *   *   [请求方法](#_87)
-        *   [从内网访问](#_94)
-        *   [从某网站跳转](#_101)
-        *   [身份为admin才可以访问](#admin_108)
-        *   [从某某浏览器访问](#_115)
-        *   [有时候还会自己自定义一个报头输入](#_122)
-
-### http —请求header大全
+## http —请求header大全
 
 | Header | 解释 | 示例 |
 | :-: | :-: | :-: |
@@ -49,7 +36,7 @@
 | Warning | 关于消息实体的警告信息 | Warn: 199 Miscellaneous warning |
 | X-Forwarded-For | 用来说明从哪里来的，一般用来内网伪装 | X-Forwarded-For: 127.0.0.1 |
 
-### http —响应header大全
+## http —响应header大全
 
 | Header | 解释 | 示例 |
 | :-: | :-: | :-: |
@@ -82,7 +69,7 @@
 | Warning | 警告实体可能存在的问题 | Warning: 199 Miscellaneous warning |
 | WWW-Authenticate | 代表客户端请求实体应该使用的受权方案 | WWW-Authenticate: Basic |
 
-### 请求方法大全
+## 请求方法大全
 
 | 方法 | 描述 |
 | :-: | :-: |
@@ -95,39 +82,39 @@
 | OPTIONS | 获取http服务器支持的http请求方法，允许客户端查看服务器的性能，比如ajax跨域时的预检等。 |
 | TRACE | 回显服务器收到的请求，主要用于测试或诊断。一般禁用，防止被恶意攻击或盗取信息。 |
 
-### CTF在HTTP方面的总结
+## CTF在HTTP方面的总结
 
-#### 请求方法
+### 请求方法
 
 当遇到题目提示是用某某某方法发送请求的则需要修改请求方法，如：**用abc方法请求**
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/df5edb731fce4b1387ca12617f690864.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQXNpb25t,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
-#### 从内网访问
+### 从内网访问
 
 若提示是从内网访问，或者说需要某某IP才能访问的则需要用到`X-Forwarded-For`头伪装，有时候要把X-Forwarded-For的三个参数都输入，这里只演示了一个
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/9350c95d66ae4e0bba1013ce4515b89f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQXNpb25t,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
-#### 从某网站跳转
+### 从某网站跳转
 
 若提示说访问此网站得由某某网站中访问，则需要改`Referer`头，如：需要从www.dubai.com里访问
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/30ea47f647ef4671af21009eafb48582.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQXNpb25t,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
-#### 身份为admin才可以访问
+### 身份为admin才可以访问
 
 若提示说身份为admin才可访问的，一般是修改cookie
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/f19f6460f8f44572a4d0ab480ca9ab3b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQXNpb25t,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
-#### 从某某浏览器访问
+### 从某某浏览器访问
 
 若提示说要从某某浏览器访问则需要改`user-agent`,如：从dubai浏览器访问
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/f038a129ebc44e30a1c0902aed8d215f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQXNpb25t,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
-#### 有时候还会自己自定义一个报头输入
+有时候还会自己自定义一个报头输入
 
 以上就是常用的ctf中http的知识
 
