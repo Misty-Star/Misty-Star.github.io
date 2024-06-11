@@ -14,6 +14,9 @@ importers:
       '@waline/client':
         specifier: ^3.1.3
         version: 3.1.3
+      katex:
+        specifier: ^0.16.10
+        version: 0.16.10
       sass-loader:
         specifier: ^14.2.1
         version: 14.2.1(sass@1.77.0)(webpack@5.91.0)
@@ -25,7 +28,7 @@ importers:
         version: 2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27)
       vuepress-theme-hope:
         specifier: 2.0.0-rc.38
-        version: 2.0.0-rc.38(@waline/client@3.1.3)(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27))
+        version: 2.0.0-rc.38(@waline/client@3.1.3)(katex@0.16.10)(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27))
 
 packages:
 
@@ -1794,6 +1797,10 @@ packages:
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
 
+  katex@0.16.10:
+    resolution: {integrity: sha512-ZiqaC04tp2O5utMsl2TEZTXxa6WSC4yo0fv5ML++D3QZv/vx2Mct0mTlRx3O+uUkjfuAgOkzsCmq5MiUEsDDdA==}
+    hasBin: true
+
   kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
@@ -3148,12 +3155,13 @@ snapshots:
     optionalDependencies:
       markdown-it: 14.1.0
 
-  '@mdit/plugin-katex@0.9.0(markdown-it@14.1.0)':
+  '@mdit/plugin-katex@0.9.0(katex@0.16.10)(markdown-it@14.1.0)':
     dependencies:
       '@mdit/plugin-tex': 0.9.0(markdown-it@14.1.0)
       '@types/katex': 0.16.7
       '@types/markdown-it': 14.1.1
     optionalDependencies:
+      katex: 0.16.10
       markdown-it: 14.1.0
 
   '@mdit/plugin-mark@0.9.0(markdown-it@14.1.0)':
@@ -4795,6 +4803,10 @@ snapshots:
     optionalDependencies:
       graceful-fs: 4.2.11
 
+  katex@0.16.10:
+    dependencies:
+      commander: 8.3.0
+
   kind-of@6.0.3: {}
 
   launch-editor@2.6.1:
@@ -5598,7 +5610,7 @@ snapshots:
       - '@vue/composition-api'
       - typescript
 
-  vuepress-plugin-md-enhance@2.0.0-rc.38(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27)):
+  vuepress-plugin-md-enhance@2.0.0-rc.38(katex@0.16.10)(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27)):
     dependencies:
       '@mdit/plugin-alert': 0.9.0(markdown-it@14.1.0)
       '@mdit/plugin-align': 0.9.0(markdown-it@14.1.0)
@@ -5611,7 +5623,7 @@ snapshots:
       '@mdit/plugin-img-mark': 0.9.0(markdown-it@14.1.0)
       '@mdit/plugin-img-size': 0.9.0(markdown-it@14.1.0)
       '@mdit/plugin-include': 0.9.0(markdown-it@14.1.0)
-      '@mdit/plugin-katex': 0.9.0(markdown-it@14.1.0)
+      '@mdit/plugin-katex': 0.9.0(katex@0.16.10)(markdown-it@14.1.0)
       '@mdit/plugin-mark': 0.9.0(markdown-it@14.1.0)
       '@mdit/plugin-mathjax': 0.9.0(markdown-it@14.1.0)
       '@mdit/plugin-plantuml': 0.9.0(markdown-it@14.1.0)
@@ -5632,6 +5644,7 @@ snapshots:
       vuepress-plugin-sass-palette: 2.0.0-rc.38(sass-loader@14.2.1(sass@1.77.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27))
       vuepress-shared: 2.0.0-rc.38(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27))
     optionalDependencies:
+      katex: 0.16.10
       sass-loader: 14.2.1(sass@1.77.0)(webpack@5.91.0)
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -5667,7 +5680,7 @@ snapshots:
       - '@vue/composition-api'
       - typescript
 
-  vuepress-theme-hope@2.0.0-rc.38(@waline/client@3.1.3)(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27)):
+  vuepress-theme-hope@2.0.0-rc.38(@waline/client@3.1.3)(katex@0.16.10)(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27)):
     dependencies:
       '@vuepress/helper': 2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27))
@@ -5697,7 +5710,7 @@ snapshots:
       vue: 3.4.27
       vuepress: 2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27)
       vuepress-plugin-components: 2.0.0-rc.38(sass-loader@14.2.1(sass@1.77.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27))
-      vuepress-plugin-md-enhance: 2.0.0-rc.38(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27))
+      vuepress-plugin-md-enhance: 2.0.0-rc.38(katex@0.16.10)(markdown-it@14.1.0)(sass-loader@14.2.1(sass@1.77.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27))
       vuepress-plugin-sass-palette: 2.0.0-rc.38(sass-loader@14.2.1(sass@1.77.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27))
       vuepress-shared: 2.0.0-rc.38(vuepress@2.0.0-rc.9(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.27))
     optionalDependencies:
