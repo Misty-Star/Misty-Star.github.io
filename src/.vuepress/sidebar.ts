@@ -39,6 +39,7 @@ export default sidebar({
       children: "structure",
     },
   ],
+  "/JPsongs/": "structure",
   "/Japanese/": "structure",
   "/English/": "structure",
 });

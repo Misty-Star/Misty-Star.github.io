@@ -26,7 +26,18 @@ export default navbar([
   {
     text: "日语",
     icon: "book",
-    link: "Japanese/",
+    children: [
+      {
+        text: "日语歌学唱",
+        icon: "laptop-code",
+        link: "JPsongs/",
+      },
+      {
+        text: "日语学习",
+        icon: "laptop-code",
+        link: "Japanese/",
+      },
+    ],
   },
   {
     text: "英语",
