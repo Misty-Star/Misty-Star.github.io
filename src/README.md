@@ -34,11 +34,6 @@ projects:
     desc: English
     link: /English/
 
-  - icon: friend
-    name: 友情链接-桜吹
-    desc: Cherryblowing
-    link: https://mdkiid.github.io/
-
 
 footer: MistyStar's Blog
 ---
