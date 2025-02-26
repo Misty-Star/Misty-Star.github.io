@@ -24,6 +24,11 @@ export default navbar([
     link: "cyber/",
   },
   {
+    text: "大学数学",
+    icon: "laptop-code",
+    link: "Math/",
+  },
+  {
     text: "日语",
     icon: "book",
     children: [
